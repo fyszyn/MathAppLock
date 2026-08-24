@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MathAppLock</string>
+    <string name="question_linear">x-ന്റെ വില കണ്ടെത്തുക: %1$s = %2$d</string>
+    <string name="question_exponent">വില കാണുക: %1$d^%2$d</string>
+    <string name="question_square_root">വില കാണുക: √%1$d</string>
+    <string name="question_geometry_angle">ഒരു ത്രികോണത്തിലെ രണ്ട് കോണുകൾ %1$d°, %2$d° എന്നിവയാണ്. മൂന്നാമത്തെ കോൺ കണ്ടെത്തുക.</string>
+    <string name="question_geometry_leg">ഒരു മട്ടത്രികോണത്തിന്റെ കർണ്ണത്തിന്റെ നീളം %1$d-ഉം ഒരു വശത്തിന്റെ നീളം %2$d-ഉം ആണ്. മറ്റേ വശത്തിന്റെ നീളം കണ്ടെത്തുക.</string>
+    <string name="question_geometry_hypotenuse">ഒരു മട്ടത്രികോണത്തിന്റെ ലംബവശങ്ങളുടെ നീളം %1$d, %2$d എന്നിവയാണ്. കർണ്ണത്തിന്റെ നീളം കണ്ടെത്തുക.</string>
+    <string name="lock_title">ആപ്പ് ലോക്ക് ചെയ്തിരിക്കുന്നു</string>
+    <string name="lock_instruction">തുറക്കാനായി ഈ എട്ടാം ക്ലാസ്സ് മാത്‌സ് സമവാക്യം പരിഹരിക്കുക:</string>
+    <string name="lock_verify_btn">ശരി</string>
+    <string name="lock_wrong_answer">ഉത്തരം തെറ്റാണ്! വീണ്ടും ശ്രമിക്കുക.</string>
+    <string name="lock_toast_blocked">തുറക്കാൻ നിങ്ങൾ മാത്‌സ് ചോദ്യത്തിന് ഉത്തരം നൽകണം!</string>
+    <string name="accessibility_description">തിരഞ്ഞെടുത്ത മാത്‌സ് ലോക്ക് അപ്ലിക്കേഷനുകൾ ലോക്ക് ചെയ്യുന്നതിനായി ഈ ആക്‌സസിബിലിറ്റി സർവീസ് ഫോർഗ്രൗണ്ട് ആപ്പ് അവസ്ഥയെ നിരീക്ഷിക്കുന്നു.</string>
+    <string name="search_placeholder">ആപ്പുകൾ തിരയുക...</string>
+    <string name="app_list_title">ലോക്ക് ചെയ്യേണ്ട ആപ്പുകൾ തിരഞ്ഞെടുക്കുക</string>
+    <string name="no_apps_found">ആപ്പുകളൊന്നും കണ്ടെത്താനായില്ല</string>
+</resources>
