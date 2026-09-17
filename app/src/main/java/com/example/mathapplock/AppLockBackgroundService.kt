@@ -21,8 +21,11 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
-import kotlinx.coroutines.*
+import java.time.DayOfWeek
+import java.time.LocalDateTime
+import java.time.LocalTime
 import java.util.HashSet
+import kotlinx.coroutines.*
 
 class AppLockBackgroundService : Service() {
 
@@ -126,6 +129,12 @@ class AppLockBackgroundService : Service() {
     }
 
     private fun checkForegroundApp() {
+        if (isWithinExemptionWindow()) {
+            dismissOverlay()
+            lastCheckedPackage = null
+            return
+        }
+
         val fgPackage = getForegroundPackage() ?: return
 
         // Prevent infinite loops and duplicate checks on the same active package
@@ -287,5 +296,22 @@ class AppLockBackgroundService : Service() {
             e.printStackTrace()
         }
         dismissOverlay()
+    }
+
+    fun isWithinExemptionWindow(now: LocalDateTime = LocalDateTime.now()): Boolean =
+        Companion.isWithinExemptionWindow(now)
+
+    companion object {
+        fun isWithinExemptionWindow(now: LocalDateTime = LocalDateTime.now()): Boolean {
+            val day = now.dayOfWeek
+            val isWeekday = day != DayOfWeek.SATURDAY && day != DayOfWeek.SUNDAY
+            if (!isWeekday) return false
+
+            val time = now.toLocalTime()
+            val startTime = LocalTime.of(9, 0, 0)
+            val endTime = LocalTime.of(16, 0, 0)
+
+            return !time.isBefore(startTime) && !time.isAfter(endTime)
+        }
     }
 }
